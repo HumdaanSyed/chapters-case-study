@@ -1,0 +1,37 @@
+{
+  "retrieval": {
+    "RAG_TEMPLATE": "### Task:\nRespond to the user query using the provided context, incorporating inline citations in the format [id] **only when the <source> tag includes an explicit id attribute** (e.g., <source id=\"1\">).\n\n### Guidelines:\n- If you don't know the answer, clearly state that.\n- If uncertain, ask the user for clarification.\n- Respond in the same language as the user's query.\n- If the context is unreadable or of poor quality, inform the user and provide the best possible answer.\n- If the answer isn't present in the context but you possess the knowledge, explain this to the user and provide the answer using your own understanding.\n- **Only include inline citations using [id] (e.g., [1], [2]) when the <source> tag includes an id attribute.**\n- Do not cite if the <source> tag does not contain an id attribute.\n- Do not use XML tags in your response.\n- Ensure citations are concise and directly related to the information provided.\n\n### Example of Citation:\nIf the user asks about a specific topic and the information is found in a source with a provided id attribute, the response should include the citation like in the following example:\n* \"According to the study, the proposed method increases efficiency by 20% [1].\"\n\n### Output:\nProvide a clear and direct response to the user's query, including inline citations in the format [id] only when the <source> tag with id attribute is present in the context.\n\n<context>\n{{CONTEXT}}\n</context>\n",
+    "TOP_K": 10,
+    "BYPASS_EMBEDDING_AND_RETRIEVAL": false,
+    "RAG_FULL_CONTEXT": false,
+    "RAG_FULL_TEXT_CHAR_THRESHOLD": 50000,
+    "ENABLE_RAG_HYBRID_SEARCH": false,
+    "ENABLE_RAG_HYBRID_SEARCH_ENRICHED_TEXTS": false,
+    "TOP_K_RERANKER": 10,
+    "RELEVANCE_THRESHOLD": 0,
+    "HYBRID_BM25_WEIGHT": 0.5,
+    "CONTENT_EXTRACTION_ENGINE": "",
+    "CONTENT_EXTRACTION_SUPPORTED_MEDIA_MIME_TYPES": null,
+    "PDF_EXTRACT_IMAGES": false,
+    "PDF_LOADER_MODE": "page",
+    "RAG_RERANKING_MODEL": "",
+    "RAG_RERANKING_ENGINE": "",
+    "RAG_RERANKING_BATCH_SIZE": 32,
+    "TEXT_SPLITTER": "token_transformers",
+    "RAG_TOKENIZER_MODEL": "sentence-transformers/all-MiniLM-L6-v2",
+    "ENABLE_MARKDOWN_HEADER_TEXT_SPLITTER": false,
+    "CHUNK_SIZE": 200,
+    "CHUNK_MIN_SIZE_TARGET": 0,
+    "CHUNK_OVERLAP": 40,
+    "ALLOWED_FILE_EXTENSIONS": []
+  },
+  "embedding": {
+    "RAG_EMBEDDING_ENGINE": "",
+    "RAG_EMBEDDING_MODEL": "sentence-transformers/all-MiniLM-L6-v2",
+    "RAG_EMBEDDING_QUERY_PREFIX": null,
+    "RAG_EMBEDDING_CONTENT_PREFIX": null,
+    "RAG_EMBEDDING_BATCH_SIZE": 1,
+    "ENABLE_ASYNC_EMBEDDING": true,
+    "RAG_EMBEDDING_CONCURRENT_REQUESTS": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "repository_url": "https://github.com/open-webui/oikb",
+  "commit": "29b0e453812c1b973cfad45420140809db4a98f5",
+  "knowledge_base_name": "oikb-case-study",
+  "upload_folder": "knowledge",
+  "knowledge_base_description": "Selected documentation and code from the public open-webui/oikb repository.\n\nIndexed files:\n\nREADME.md\n\nsrc/oikb/history.py\n\nSource commit: 29b0e453812c1b973cfad45420140809db4a98f5",
+  "files": [
+    {
+      "path": "README.md",
+      "upload_name": "README.md"
+    },
+    {
+      "path": "src/oikb/history.py",
+      "upload_name": "history.py"
+    }
+  ]
+}
